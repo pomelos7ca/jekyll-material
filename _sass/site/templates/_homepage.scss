@@ -1,0 +1,12 @@
+/* Shared Homepage styles */
+.page-template-homepage  {
+  
+  .site-content {
+    @include make-row();
+    word-break: break-word;
+
+      .content-area {
+          @include make-md-column(12);
+      }
+  }
+}

@@ -1,0 +1,158 @@
+/*-----------------------------------------------------------------------------------*/
+/* Comments
+/*-----------------------------------------------------------------------------------*/
+#comments  {
+     margin-top:  40px 
+   }
+#comments.empty-closed-comments  {
+     display:  none }
+#comments .comments-title  {
+     font-size:  16px;
+     font-weight:  600;
+     border-bottom:  1px solid #e4e4e4;
+     margin:  0 0 20px;
+     padding-bottom:  5px;
+     color:  #000;
+ }
+
+ol.comment-list {
+  padding-left: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+.comment-notes  {
+     color:  #666 }
+#comments .children  {
+     margin-left:  30px }
+#comments li article  {
+     position:  relative }
+.comment-author  {
+     left:  0;
+     position:  absolute;
+     top:  0px;
+     padding:  3px;
+     border:  1px solid #e4e4e4;
+     box-sizing:  border-box;
+     -moz-box-sizing:  border-box;
+     -webkit-box-sizing:  border-box;
+ }
+
+.comment-author .avatar  {
+     display:  block }
+.comment-details  {
+     position:  relative;
+     margin-bottom:  25px;
+     padding-bottom:  25px;
+     margin-left:  80px;
+     border-bottom:  1px solid #e4e4e4;
+ }
+
+.comment-meta  {
+     margin-bottom:  10px }
+.comment-meta .fn  {
+     font-size:  14px;
+     font-weight:  600;
+     color:  #000;
+ }
+
+.comment-date a  {
+     font-size:  11px;
+     color:  #909090 !important;
+     margin-right:  10px;
+ }
+
+.comment-date a:hover  {
+     color:  #4d4d4d !important }
+#cancel-comment-reply-link  {
+     display:  block;
+     color:  #F00 !important;
+     cursor:  pointer;
+     font-size:  12px;
+ }
+
+#cancel-comment-reply-link:hover  {
+     text-decoration:  underline }
+.logged-in-as  {
+     font-size:  11px;
+     margin:  0 0 10px;
+ }
+
+p.comment-notes  {
+     font-size:  12px;
+     margin:  5px 0 30px;
+ }
+
+#respond  {
+     margin:  0 0 25px }
+#respond h3  {
+     font-size:  16px;
+     margin:  30px 0 0;
+     font-weight:  600;
+ }
+
+.comment-form-author, 
+.comment-form-email, 
+.comment-form-website, 
+.comment-form-comment, 
+.comment-form-url  {
+     margin:  0 0 10px }
+.comment-form-author input, 
+.comment-form-author input, 
+.comment-form-email input, 
+.comment-form-website input, 
+.comment-form-comment input, 
+.comment-form-url input  {
+     width:  50%;
+ }
+
+#commentform label  {
+     display:  inline-block;
+ }
+
+#commentform #submit  {
+     float:  none }
+.comment-navigation  {
+     font-size:  12px }
+.nav-next  {
+     text-align:  right }
+.form-allowed-tags  {
+     display:  none }
+span.required  {
+     color:  #F00;
+     font-size:  9px;
+     position:  relative;
+     top:  -4px;
+ }
+
+.no-comments  {
+     text-align:  right }
+.no-comments i  {
+     margin-right:  8px }
+/*WP JetPack*/
+.comment-subscription-form  {
+     margin:  0px }
+.comment-subscription-form:after  {
+     clear:  both;
+     content:  ".";
+     display:  block;
+     height:  0;
+     line-height:  0;
+     visibility:  hidden;
+ }
+
+.comment-subscription-form input, 
+.comment-subscription-form label  {
+     float:  left;
+     font-size:  11px;
+     margin:  0px !important;
+     margin-right:  5px !important;
+ }
+
+#commentform .submit {
+  @extend .btn;
+  @extend .btn-default;
+}
+

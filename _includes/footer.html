@@ -1,0 +1,57 @@
+<footer class="footer footer-transparent">
+  <div class="container">
+
+    <!-- <php
+    $args = array(
+      'theme_location' => 'footer',
+      'container' => 'nav',
+      'container_class' => 'pull-left'
+      );
+    if (has_nav_menu('footer')) {
+      wp_nav_menu($args);
+    }
+  ?> -->
+
+    <div class="social-area pull-right">
+
+
+      <a target="_blank" class="btn btn-social btn-just-icon" href="http://">
+        <i class="fa fa-facebook"></i>
+        <div class="ripple-container"></div>
+      </a>
+      <a target="_blank" class="btn btn-social btn-just-icon" href="http://">
+        <i class="fa fa-twitter"></i>
+      </a>
+
+      <!-- < ?php $footer_social = get_theme_mod( 'footer_social', '' );
+
+        if (count($footer_social) > '0' ) : 
+          foreach ($footer_social as $social) : 
+            $social_icon = "{$social['social_icon']}"; 
+            $social_url = "{$social['social_url']}";
+            
+          ?>
+
+          < ?php if ($social_icon != '') : ?>
+            <a target="_blank" class="btn btn-social btn-just-icon" href="<?php echo $social_url; ?>">
+                <i class="fa fa-< ?php echo $social_icon; ?>"></i>
+            </a>
+          < ?php endif; ?>
+
+         < ?php endforeach; ?>
+        < ?php endif; ?> -->
+
+    </div>
+    <div class="copyright">
+      Theme: mvpwp by
+      <a href="http://braginteractive.com" rel="designer">Brad Williams</a>.
+      <!-- <php $copyright_text = get_theme_mod( 'copyright_text', '' ); 
+      if ($copyright_text != '') {
+        echo $copyright_text;
+      } else {
+        printf( esc_html__( 'Theme: %1$s by %2$s.', 'mvpwp' ), 'mvpwp', '<a href="http://braginteractive.com" rel="designer">Brad Williams</a>' );
+      }
+     ?> -->
+    </div>
+  </div>
+</footer>

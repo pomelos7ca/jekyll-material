@@ -1,0 +1,23 @@
+---
+layout: default
+---
+{% include page-header.html text='博客标签分类' %}
+
+<div class="main main-raised">
+  <div class="section">
+    <div class="container">
+      <div>
+        {% for tag in site.tags %}
+        <h2 id="{{tag.first}}">{{tag.first}}</h2>
+        <ul>
+          {% for post in tag.last %}
+          <li>
+            <a href="{{post.url}}">{{post.title}}</a>
+          </li>
+          {% endfor %}
+        </ul>
+        <hr> {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

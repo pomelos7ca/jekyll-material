@@ -1,0 +1,17 @@
+.posts-navigation,
+.post-navigation {
+
+  padding: 30px 0;
+
+  .nav-previous,
+  .nav-next {
+    display: inline;
+  }
+
+  // .nav-previous {
+  //   float: right;
+  // }
+  .nav-next {
+    float: right;
+  }
+}

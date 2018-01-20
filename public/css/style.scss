@@ -1,0 +1,95 @@
+---
+
+---
+/*!
+Theme Name: MaterialKitWP
+Theme URI: http://mvpwp.com
+Author: Brad Williams
+Author URI: http://braginteractive.com
+Description: Material WordPress Theme
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: mvpwp
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+MVPWP is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+@import "vars/colors";
+
+/*--------------------------------------------------------------
+# Material Kit Variables
+--------------------------------------------------------------*/
+@import 'material-kit/variables';
+
+/*--------------------------------------------------------------
+# Bootstrap
+--------------------------------------------------------------*/
+@import "bootstrap/bootstrap";
+
+/*--------------------------------------------------------------
+# Material Kit 
+--------------------------------------------------------------*/
+@import 'material-kit/mixins';
+@import 'material-kit/shadows';
+@import 'material-kit/core';
+@import 'material-kit/ripples';
+@import 'material-kit/example-pages';
+
+/*--------------------------------------------------------------
+# Font Awesome
+--------------------------------------------------------------*/
+$fa-font-path:  '../fonts';
+@import "font-awesome/font-awesome";
+
+/*--------------------------------------------------------------
+# Utilities
+--------------------------------------------------------------*/
+@import "utils/alignments";
+//@import "utils/spacing"; 
+
+/*--------------------------------------------------------------
+# Mixins
+--------------------------------------------------------------*/
+@import "mixins/mixins-master";
+
+/*--------------------------------------------------------------
+# Comments
+--------------------------------------------------------------*/
+@import "modules/comments";
+
+/*--------------------------------------------------------------
+# Post Navigation
+--------------------------------------------------------------*/
+@import "modules/posts-navigation";
+
+/*--------------------------------------------------------------
+# Widget - Post Thumbnails
+--------------------------------------------------------------*/
+@import "modules/widget-post-thumbnails";
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+@import "site/secondary/widgets";
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+@import "site/site";
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+@import "media/media";

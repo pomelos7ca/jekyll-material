@@ -1,0 +1,37 @@
+.widget {
+	margin: 0 0 1.5em;
+
+	/* Make sure select elements fit in widgets. */
+	select {
+		max-width: 100%;
+	}
+
+  .tagcloud,
+  .textwidget,
+  .calendar_wrap {
+    @extend .panel-body;
+  }
+
+  ul {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  table{
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.widget_search {
+  border: none;
+  box-shadow: none;
+}
+
+.tagcloud a {
+  @extend .btn;
+  @extend .btn-default;
+  margin-bottom: 5px;
+}
+
+
