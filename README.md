@@ -8,4 +8,4 @@
 [jekyll-material](https://sharp-summit.github.io/jekyll-material/)
 
 效果预览:  
-![homeshoot](/homeshoot.png)
+![homeshoot](/homeshoot.jpg)
