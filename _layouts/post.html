@@ -51,14 +51,14 @@ layout: default
               <div class="nav-links">
                   <div class="nav-previous">
                     
-                    <a href="{{page.previous.url}}" rel="previous">{{page.previous.title}}</a>
+                    <a href="{{page.previous.url | prepend: site.baseurl }}" rel="previous">{{page.previous.title}}</a>
                   </div>
               </div>
               {% endif %}
               {% if page.next.url %}
               <div class="nav-links">
                 <div class="nav-next">
-                  <a href="{{page.next.url}}" rel="next">{{page.next.title}}</a>
+                  <a href="{{page.next.url | prepend: site.baseurl }}" rel="next">{{page.next.title}}</a>
                 </div>
               </div>
               {% endif %}

@@ -15,7 +15,7 @@ layout: default
             <article id="post-24" class="post-24 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-demo tag-post">
               <header class="entry-header">
                 <h2 class="entry-title">
-                  <a href="{{post.url}}" rel="bookmark">{{post.title}}</a>
+                  <a href="{{post.url | prepend: site.baseurl }}" rel="bookmark">{{post.title}}</a>
                 </h2>
                 <div class="entry-meta">
                   <span class="posted-on">
@@ -48,7 +48,7 @@ layout: default
                   {{post.description}}
                 </p>
                 <div class="more-link">
-                  <a class="btn btn-default" href="{{post.url}}">Read More</a>
+                  <a class="btn btn-default" href="{{post.url | prepend: site.baseurl }}">Read More</a>
                 </div>
               </div>
               <!-- .entry-content -->
@@ -57,7 +57,7 @@ layout: default
                 <span class="tags-links">
                   <i class="fa fa-tags" aria-hidden="true"></i>
                   {% for tag in post.tags %}
-                    <a href="/tags#{{tag}}">{{tag}}</a>
+                    <a href="{{ site.baseurl }}/tags#{{tag}}">{{tag}}</a>
                   {% endfor %}
                   <!-- <a href="https://mvpwp.com/demo/materialkitwp/tag/demo/" rel="tag">{{post.tags | join:','}}</a>,
                   <a href="https://mvpwp.com/demo/materialkitwp/tag/post/" rel="tag">post</a> -->

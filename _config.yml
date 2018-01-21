@@ -1,2 +1,8 @@
-title: MaterialDesign
+title: 浮云小栈
 author: summit
+
+baseurl: "/jekyll-material"
+
+sass:
+  sass_dir:     _sass
+  style:        compressed
