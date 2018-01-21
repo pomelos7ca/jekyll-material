@@ -10,7 +10,7 @@ layout: page
             <div class="entry-meta">
               <span class="posted-on">
                 <i class="fa fa-calendar" aria-hidden="true"></i>
-                <time class="entry-date published updated">{{page.date | date:'%d,%m %Y'}}</time>
+                <time class="entry-date published updated">{{page.date | date:'%Y %m,%d %H:%M'}}</time>
               </span>
               <span class="byline">
                 <i class="fa fa-user" aria-hidden="true"></i>
@@ -32,13 +32,6 @@ layout: page
           </footer>
           <!-- .entry-footer -->
         </article>
-        <!-- #post-## -->
-        <!-- {% if page.previous.url %}
-        <li class="previous"><a href="{{page.previous.url}}"><span aria-hidden="true">&larr;</span>{{page.previous.title}}</a></li>
-        {% endif %}
-        {% if page.next.url %}
-        <li class="next"><a href="{{page.next.url}}">{{page.next.title}} <span aria-hidden="true">&rarr;</span></a></li>
-        {% endif %} -->
         
         <nav class="navigation post-navigation" role="navigation">
           <h2 class="screen-reader-text">Post navigation</h2>
