@@ -1,74 +1,65 @@
 ---
-layout: default
+layout: page
 --- 
 
-{% include page-header.html text=page.title %}
+<div id="content" class="row">
+    <div id="primary" class="col-md-8 col-md-offset-2">
+      <main id="main" class="site-main" role="main">
+        <article id="post-1" class="post-1 post type-post status-publish format-standard hentry category-uncategorized">
+          <header class="entry-header">
+            <div class="entry-meta">
+              <span class="posted-on">
+                <i class="fa fa-calendar" aria-hidden="true"></i>
+                <time class="entry-date published updated">{{page.date | date:'%d,%m %Y'}}</time>
+              </span>
+              <span class="byline">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <span class="author vcard">
+                  {{page.author | default:site.author}}
+                </span>
+              </span>
+            </div>
+            <!-- .entry-meta -->
+          </header>
+          <!-- .entry-header -->
 
-<div class="main main-raised">
-  <div class="section">
-    <div class="container">
-      <div id="content" class="row">
-        <div id="primary" class="col-md-8 col-md-offset-2">
-          <main id="main" class="site-main" role="main">
-            <article id="post-1" class="post-1 post type-post status-publish format-standard hentry category-uncategorized">
-              <header class="entry-header">
-                <div class="entry-meta">
-                  <span class="posted-on">
-                    <i class="fa fa-calendar" aria-hidden="true"></i>
-                    <time class="entry-date published updated">{{page.date | date:'%d,%m %Y'}}</time>
-                  </span>
-                  <span class="byline">
-                    <i class="fa fa-user" aria-hidden="true"></i>
-                    <span class="author vcard">
-                      {{page.author | default:site.author}}
-                    </span>
-                  </span>
-                </div>
-                <!-- .entry-meta -->
-              </header>
-              <!-- .entry-header -->
+          <div class="entry-content">
+            {{content}}
+          </div>
+          <!-- .entry-content -->
 
-              <div class="entry-content">
-                {{content}}
+          <footer class="entry-footer">
+          </footer>
+          <!-- .entry-footer -->
+        </article>
+        <!-- #post-## -->
+        <!-- {% if page.previous.url %}
+        <li class="previous"><a href="{{page.previous.url}}"><span aria-hidden="true">&larr;</span>{{page.previous.title}}</a></li>
+        {% endif %}
+        {% if page.next.url %}
+        <li class="next"><a href="{{page.next.url}}">{{page.next.title}} <span aria-hidden="true">&rarr;</span></a></li>
+        {% endif %} -->
+        
+        <nav class="navigation post-navigation" role="navigation">
+          <h2 class="screen-reader-text">Post navigation</h2>
+          {% if page.previous.url %}
+          <div class="nav-links">
+              <div class="nav-previous">
+                
+                <a href="{{page.previous.url | prepend: site.baseurl }}" rel="previous">{{page.previous.title}}</a>
               </div>
-              <!-- .entry-content -->
-
-              <footer class="entry-footer">
-              </footer>
-              <!-- .entry-footer -->
-            </article>
-            <!-- #post-## -->
-            <!-- {% if page.previous.url %}
-            <li class="previous"><a href="{{page.previous.url}}"><span aria-hidden="true">&larr;</span>{{page.previous.title}}</a></li>
-            {% endif %}
-            {% if page.next.url %}
-            <li class="next"><a href="{{page.next.url}}">{{page.next.title}} <span aria-hidden="true">&rarr;</span></a></li>
-            {% endif %} -->
-            
-            <nav class="navigation post-navigation" role="navigation">
-              <h2 class="screen-reader-text">Post navigation</h2>
-              {% if page.previous.url %}
-              <div class="nav-links">
-                  <div class="nav-previous">
-                    
-                    <a href="{{page.previous.url | prepend: site.baseurl }}" rel="previous">{{page.previous.title}}</a>
-                  </div>
-              </div>
-              {% endif %}
-              {% if page.next.url %}
-              <div class="nav-links">
-                <div class="nav-next">
-                  <a href="{{page.next.url | prepend: site.baseurl }}" rel="next">{{page.next.title}}</a>
-                </div>
-              </div>
-              {% endif %}
-            </nav>
-          </main>
-          <!-- #main -->
-        </div>
-        <!-- #primary -->
-      </div>
-
+          </div>
+          {% endif %}
+          {% if page.next.url %}
+          <div class="nav-links">
+            <div class="nav-next">
+              <a href="{{page.next.url | prepend: site.baseurl }}" rel="next">{{page.next.title}}</a>
+            </div>
+          </div>
+          {% endif %}
+        </nav>
+      </main>
+      <!-- #main -->
     </div>
+    <!-- #primary -->
   </div>
-</div>

@@ -1,113 +1,106 @@
 ---
-layout: default 
+layout: page 
+title: "首页"
+text: 志不立，天下无可成之事，虽百工技艺，未有不本于志者。
+permalink: /
+order: 0
 ---
 
-{% include page-header.html %}
+<div id="content" class="row">
+    <div id="primary" class="col-md-8 col-md-offset-2">
+      <main id="main" class="site-main" role="main">
 
-<div class="main main-raised">
-  <div class="section">
-    <div class="container">
-      <div id="content" class="row">
-        <div id="primary" class="col-md-8 col-md-offset-2">
-          <main id="main" class="site-main" role="main">
-
-            {% for post in site.posts%}
-            <article id="post-24" class="post-24 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-demo tag-post">
-              <header class="entry-header">
-                <h2 class="entry-title">
-                  <a href="{{post.url | prepend: site.baseurl }}" rel="bookmark">{{post.title}}</a>
-                </h2>
-                <div class="entry-meta">
-                  <span class="posted-on">
-                    <i class="fa fa-calendar" aria-hidden="true"></i>
-                    <!-- <a href="https://mvpwp.com/demo/materialkitwp/2016/07/28/demo-post/" rel="bookmark">
-                      
-                    </a> -->
-                    <time class="entry-date published updated" >{{post.date | date:'%d,%m %Y'}}</time>
-                  </span>
-                  <span class="byline">
-                    <i class="fa fa-user" aria-hidden="true"></i>
-                    <span class="author vcard">
-                      <!-- <a class="url fn n" href="#"></a> -->
-                      {{post.author | default:site.author}}
-                    </span>
-                  </span>
-                  <!-- <span class="comments-link">
-                    <i class="fa fa-comments" aria-hidden="true"></i>
-                    <a href="https://mvpwp.com/demo/materialkitwp/2016/07/28/demo-post/#respond">Leave a Comment
-                      <span class="screen-reader-text"> on Demo Post</span>
-                    </a>
-                  </span> -->
-                </div>
-                <!-- .entry-meta -->
-              </header>
-              <!-- .entry-header -->
-
-              <div class="entry-content">
-                <p>
-                  {{post.description}}
-                </p>
-                <div class="more-link">
-                  <a class="btn btn-default" href="{{post.url | prepend: site.baseurl }}">Read More</a>
-                </div>
-              </div>
-              <!-- .entry-content -->
-
-              <footer class="entry-footer">
-                <span class="tags-links">
-                  <i class="fa fa-tags" aria-hidden="true"></i>
-                  {% for tag in post.tags %}
-                    <a href="{{ site.baseurl }}/tags#{{tag}}">{{tag}}</a>
-                  {% endfor %}
-                  <!-- <a href="https://mvpwp.com/demo/materialkitwp/tag/demo/" rel="tag">{{post.tags | join:','}}</a>,
-                  <a href="https://mvpwp.com/demo/materialkitwp/tag/post/" rel="tag">post</a> -->
+        {% for post in site.posts%}
+        <article id="post-24" class="post-24 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-demo tag-post">
+          <header class="entry-header">
+            <h2 class="entry-title">
+              <a href="{{post.url | prepend: site.baseurl }}" rel="bookmark">{{post.title}}</a>
+            </h2>
+            <div class="entry-meta">
+              <span class="posted-on">
+                <i class="fa fa-calendar" aria-hidden="true"></i>
+                <!-- <a href="https://mvpwp.com/demo/materialkitwp/2016/07/28/demo-post/" rel="bookmark">
+                  
+                </a> -->
+                <time class="entry-date published updated" >{{post.date | date:'%d,%m %Y'}}</time>
+              </span>
+              <span class="byline">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <span class="author vcard">
+                  <!-- <a class="url fn n" href="#"></a> -->
+                  {{post.author | default:site.author}}
                 </span>
-              </footer>
-              <!-- .entry-footer -->
-            </article>
-            {% endfor %}
-            <!-- 
-        <?php
-        if ( have_posts() ) :
+              </span>
+              <!-- <span class="comments-link">
+                <i class="fa fa-comments" aria-hidden="true"></i>
+                <a href="https://mvpwp.com/demo/materialkitwp/2016/07/28/demo-post/#respond">Leave a Comment
+                  <span class="screen-reader-text"> on Demo Post</span>
+                </a>
+              </span> -->
+            </div>
+            <!-- .entry-meta -->
+          </header>
+          <!-- .entry-header -->
 
-          if ( is_home() && ! is_front_page() ) : ?>
-            <header>
-              <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-            </header>
+          <div class="entry-content">
+            <p>
+              {{post.description}}
+            </p>
+            <div class="more-link">
+              <a class="btn btn-default" href="{{post.url | prepend: site.baseurl }}">Read More</a>
+            </div>
+          </div>
+          <!-- .entry-content -->
 
-          <?php endif; ?> 
-          
-          <?php
-          /* Start the Loop */
-          while ( have_posts() ) : the_post();
+          <footer class="entry-footer">
+            <span class="tags-links">
+              <i class="fa fa-tags" aria-hidden="true"></i>
+              {% for tag in post.tags %}
+                <a href="{{ site.baseurl }}/tags#{{tag}}">{{tag}}</a>
+              {% endfor %}
+              <!-- <a href="https://mvpwp.com/demo/materialkitwp/tag/demo/" rel="tag">{{post.tags | join:','}}</a>,
+              <a href="https://mvpwp.com/demo/materialkitwp/tag/post/" rel="tag">post</a> -->
+            </span>
+          </footer>
+          <!-- .entry-footer -->
+        </article>
+        {% endfor %}
+        <!-- 
+    <?php
+    if ( have_posts() ) :
 
-            /*
-             * Include the Post-Format-specific template for the content.
-             * If you want to override this in a child theme, then include a file
-             * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-             */
-            get_template_part( 'template-parts/content', 'get_post_format()' ); 
+      if ( is_home() && ! is_front_page() ) : ?>
+        <header>
+          <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+        </header>
 
-          endwhile; ?>  
+      <?php endif; ?> 
+      
+      <?php
+      /* Start the Loop */
+      while ( have_posts() ) : the_post();
 
-        <?php 
-          the_posts_navigation();
+        /*
+         * Include the Post-Format-specific template for the content.
+         * If you want to override this in a child theme, then include a file
+         * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+         */
+        get_template_part( 'template-parts/content', 'get_post_format()' ); 
 
-        else :
+      endwhile; ?>  
 
-          get_template_part( 'template-parts/content', 'none' );
+    <?php 
+      the_posts_navigation();
 
-        endif; ?> -->
+    else :
 
-          </main>
-          <!-- #main -->
-        </div>
-        <!-- #primary -->
+      get_template_part( 'template-parts/content', 'none' );
 
-      </div>
+    endif; ?> -->
+
+      </main>
+      <!-- #main -->
     </div>
-  </div>
-</div>
+    <!-- #primary -->
 
-<!-- <?php
-  get_footer(); -->
+  </div>
