@@ -18,6 +18,8 @@
 --------------------------------------------------------------*/
 @import "templates/homepage";
 
+@import "templates/archives";
+
 .screen-reader-text {
   @extend .sr-only;
 }

@@ -5,21 +5,23 @@ text: "天下之事，其得之不难，则其失之必易；其积之不久，�
 order: 1
 ---
 
-{% for post in site.posts %}
-    <ul>
-        {% unless post.next %}
-            <h3><i class=" fa fa-star"></i>{{ post.date | date: '%Y' }}</h3>
-        {% else %}
-            {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-            {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-            {% if year != nyear %}
-                <h3><i class=" fa fa-star"></i>{{ post.date | date: '%Y' }}</h3>
-            {% endif %}
-        {% endunless %}
-        <li>
-            <i class="fa fa-calendar"></i>{{ post.date | date:"%m" }}月
-            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </li>
-    </ul>
-    {% endfor %}
+<div class="archives-area">
+  {% for post in site.posts %}
+      <ul>
+          {% unless post.next %}
+              <h3><i class=" fa fa-star"></i>{{ post.date | date: '%Y' }}</h3>
+          {% else %}
+              {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+              {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+              {% if year != nyear %}
+                  <h3><i class=" fa fa-star"></i>{{ post.date | date: '%Y' }}</h3>
+              {% endif %}
+          {% endunless %}
+          <li>
+              <i class="fa fa-calendar"></i>{{ post.date | date:"%m" }}月
+              <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </li>
+      </ul>
+  {% endfor %}
+</div>
 

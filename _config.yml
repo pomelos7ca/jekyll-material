@@ -1,7 +1,16 @@
-title: 浮云小栈
-author: summit
 
+title: 浮云小栈
+author: 王标
 baseurl: "/jekyll-material"
+host: ''
+
+socials:
+  - icon: 'google-plus'
+    url: 'http://'
+  - icon: 'gitlab'
+    url: 'https://gitlab.com/sharp-summit'
+  - icon: 'weibo'
+    url: 'https://weibo.com/summit7ca'
 
 sass:
   sass_dir:     _sass

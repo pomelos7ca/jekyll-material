@@ -1,0 +1,16 @@
+/* Shared Archives styles */
+
+.archives-area{
+  ul{
+    list-style: none;
+    h3{
+      border-bottom: 1px solid $blue-grey-300;
+    }
+    li{
+      margin: 10px;
+      i{
+        margin: 5px;
+      }
+    }
+  }
+}
