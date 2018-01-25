@@ -1,27 +1,22 @@
 ---
 layout: page
 title: "归档"
-text: "天下之事，其得之不难，则其失之必易；其积之不久，则其发之必不宏。"
+text: "文章归档"
 order: 1
 ---
 
-<div class="archives-area">
-  {% for post in site.posts %}
-      <ul>
-          {% unless post.next %}
-              <h3><i class=" fa fa-star"></i>{{ post.date | date: '%Y' }}</h3>
-          {% else %}
-              {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-              {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-              {% if year != nyear %}
-                  <h3><i class=" fa fa-star"></i>{{ post.date | date: '%Y' }}</h3>
-              {% endif %}
-          {% endunless %}
-          <li>
-              <i class="fa fa-calendar"></i>{{ post.date | date:"%m" }}月
-              <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-          </li>
-      </ul>
-  {% endfor %}
+{% assign my_posts = site.posts | group_by_exp:"post","post.date | date:'%Y %m'" %}
+<div class="row">
+    {% for mp in my_posts %}
+    <div class="col-md-8 col-md-offset-2">
+        <h3>{{mp.name}}月</h3>
+        <ul>
+            {% for mpi in mp.items %}
+                <li>
+                    <a href="{{mpi.url | prepend: site.baseurl}}">{{mpi.title}}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endfor %}
 </div>
-
