@@ -1,26 +1,22 @@
 ---
 layout: page
 title: "标签"
-text: "标签云."
+permalink: "/tags"
 order: 2
 ---
 
-
-<div class="main main-raised">
-  <div class="section">
-    <div class="container">
-      <div>
-        {% for tag in site.tags %}
-        <h2 id="{{tag.first}}">{{tag.first}}</h2>
-        <ul>
-          {% for post in tag.last %}
-          <li>
-            <a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a>
-          </li>
-          {% endfor %}
-        </ul>
-        <hr> {% endfor %}
+<div class="row">
+    {% for tag in site.tags %}
+      <div class="col-md-8 col-md-offset-2">
+          <h2 id="{{tag.first | downcase }}">{{tag.first}}</h2>
+          <ul>
+            {% for post in tag.last %}
+            <li>
+              <a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a>
+            </li>
+            {% endfor %}
+          </ul>
+          <hr> 
       </div>
-    </div>
-  </div>
+    {% endfor %}
 </div>

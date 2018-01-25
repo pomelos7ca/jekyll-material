@@ -29,6 +29,12 @@ layout: page
           <!-- .entry-content -->
 
           <footer class="entry-footer">
+              <span class="tags-links">
+                  <i class="fa fa-tags" aria-hidden="true"></i>
+                  {% for tag in page.tags %}
+                    <a href="{{ '/tags#' | prepend: site.baseurl }}{{tag | downcase }}">{{tag}}</a>
+                  {% endfor %}
+              </span>
           </footer>
           <!-- .entry-footer -->
         </article>
